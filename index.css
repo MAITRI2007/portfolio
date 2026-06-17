@@ -1084,84 +1084,39 @@ font-size:
 }
 
 }
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-  /* Navbar */
-  nav {
-    padding: 12px 20px;
-    flex-direction: column;
-    gap: 12px;
+  nav{
+    padding:12px 15px;
   }
 
-  .nav-links {
-    gap: 12px;
-    flex-wrap: wrap;
-    justify-content: center;
+  .nav-links{
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    gap:20px;
+
+    scrollbar-width:none;
   }
 
-  .nav-links a {
-    font-size: 0.8rem;
+  .nav-links::-webkit-scrollbar{
+    display:none;
   }
 
-  /* Sections */
-  .section {
-    padding: 80px 20px;
+  .nav-links a{
+    white-space:nowrap;
+  }
+    .video-container{
+      height:auto;
+      min-height:100vh;
   }
 
-  /* About */
-  .about-container {
-    flex-direction: column;
-    text-align: center;
+  .video-wrapper{
+      transform:scale(1);
   }
 
-  .about-text {
-    text-align: center;
-  }
-
-  .about-text h2 {
-    font-size: 2rem;
-  }
-
-  .about-text p {
-    font-size: 16px;
-  }
-
-  /* Skills */
-  .skills-grid {
-    grid-template-columns: 1fr;
-  }
-
-  /* Projects */
-  .project-card {
-    width: 100%;
-    max-width: 320px;
-    padding: 20px;
-  }
-
-  .project-card img {
-    height: 180px;
-  }
-
-  .carousel {
-    gap: 10px;
-  }
-
-  .arrow {
-    font-size: 24px;
-  }
-
-  /* Achievements */
-  .achievement-card {
-    width: 100%;
-  }
-
-  /* Contact */
-  .contact-box {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .contact-box a {
-    width: 100%;
+  .video-wrapper iframe{
+      width:100%;
+      height:60vh;
   }
 }
