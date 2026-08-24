@@ -17,6 +17,7 @@ const observer = new IntersectionObserver(entries => {
 
 sections.forEach(sec => observer.observe(sec));
 
+
 const projects = [
   {
     title: "Pre-Delinquency Engine",
@@ -24,6 +25,15 @@ const projects = [
     problem: "Predictive system identifying loan default risk.",
     tech: "HTML CSS JS",
     demo: "TECH SQUAD(pre delinquency) - Made with RecordCast.mp4",
+    github: "#"
+  },
+
+  {
+    title: "WishLane",
+    image: "WISHLANE_IMAGE.png",
+    problem: "A personalized platform for creating, scheduling, and delivering wishes and messages for meaningful moments.",
+    tech: "HTML CSS JS Supabase",
+    demo: "#",
     github: "#"
   },
 
@@ -36,6 +46,7 @@ const projects = [
     github: "#"
   }
 ];
+
 
 let current = 0;
 
@@ -63,14 +74,17 @@ function showProject(index) {
     `${index + 1} / ${projects.length}`;
 }
 
+
 function nextSlide() {
   current = (current + 1) % projects.length;
   showProject(current);
 }
 
+
 function prevSlide() {
   current = (current - 1 + projects.length) % projects.length;
   showProject(current);
 }
+
 
 showProject(0);
