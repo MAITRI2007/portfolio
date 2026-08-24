@@ -30,7 +30,7 @@ const projects = [
 
   {
     title: "WishLane",
-    image: "WISHLANE_IMAGE.png",
+    image: "Screenshot (WishLane).png",
     problem: "A personalized platform for creating, scheduling, and delivering wishes and messages for meaningful moments.",
     tech: "HTML CSS JS Supabase",
     demo: "#",
@@ -46,7 +46,6 @@ const projects = [
     github: "#"
   }
 ];
-
 
 let current = 0;
 
@@ -74,17 +73,14 @@ function showProject(index) {
     `${index + 1} / ${projects.length}`;
 }
 
-
 function nextSlide() {
   current = (current + 1) % projects.length;
   showProject(current);
 }
 
-
 function prevSlide() {
   current = (current - 1 + projects.length) % projects.length;
   showProject(current);
 }
-
 
 showProject(0);
